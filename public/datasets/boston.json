@@ -21,24 +21,22 @@
             {"name": "80-84", "value": 3309},
             {"name": ">85", "value": 2728}
         ],
-        "race_groups": {
-            "white": 333033,
-            "black": 150437,
-            "native_american": 2399,
-            "asian": 55235,
-            "pacific_islander": 265,
-            "other": 51893,
-            "mixed": 24332
-        },
-        "gender_groups": {
-            "male": 295951,
-            "female": 321643
-        },
-        "housing_groups": {
-            "owners": 204363,
-            "renters": 367017,
-            "owner_units": 85791,
-            "rental_units": 166908
-        }
+        "race_groups": [
+            {"name": "white", "value": 333033},
+            {"name": "black", "value": 150437},
+            {"name": "native american", "value": 2399},
+            {"name": "asian", "value": 55235},
+            {"name": "pacific islander", "value": 265},
+            {"name": "other", "value": 51893},
+            {"name": "mixed", "value": 24332}
+        ],
+        "gender_groups": [
+            {"name": "male", "value": 295951},
+            {"name": "female", "value": 321643}
+        ],
+        "housing_groups": [
+            {"name": "owners", "pop_value": 204363, "unit_value": 85791},
+            {"name": "renters", "pop_value": 367017, "unit_value": 166908}
+        ]
     }
 }
