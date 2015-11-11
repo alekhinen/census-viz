@@ -2,9 +2,37 @@
 <html>
   <head>
     <title>{{title}}</title>
+
+    <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+    <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    {{{body}}}
+  	<header>
+  	  <h1>Boston Census</h1>
+  	  <p>Which neighborhood are you interested in?</p>
+  	  <div class="dropdown">
+		  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+		    Boston
+		    <span class="caret"></span>
+		  </button>
+		  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+		    <li><a href="#">Allston</a></li>
+		    <li><a href="#">Back Bay</a></li>
+		    <li class="disabled"><a href="#">Boston</a></li>
+		    <li><a href="#">Roxbury</a></li>
+		  </ul>
+		</div>
+		<div style="clear:both;"></div>
+  	</header>
+  	<div class="container">
+      {{{body}}}
+    </div>
   </body>
 </html>

@@ -1,8 +1,22 @@
+html, body {
+  background-color: #393939;
+}
+
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: white;
 }
 
 a {
   color: #00B7FF;
+}
+
+header p {
+  float: left;
+  line-height: 34px;
+}
+
+header .dropdown {
+  float: left;
+  margin-left: 10px;
 }
