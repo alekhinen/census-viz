@@ -3,7 +3,6 @@ html, body {
 }
 
 body {
-  padding: 50px;
   color: white;
 }
 
@@ -11,12 +10,12 @@ a {
   color: #00B7FF;
 }
 
-header p {
+.dope-header p {
   float: left;
   line-height: 34px;
 }
 
-header .dropdown {
+.dope-header .dropdown {
   float: left;
   margin-left: 10px;
 }
