@@ -1,0 +1,40 @@
+{
+    "total_population": 1312,
+    "age_groups": [
+        {"name": "<5", "value": 27},
+        {"name": "5-9", "value": 8},
+        {"name": "10-14", "value": 14},
+        {"name": "15-19", "value": 17},
+        {"name": "20-24", "value": 154},
+        {"name": "25-29", "value": 261},
+        {"name": "30-34", "value": 123},
+        {"name": "35-39", "value": 84},
+        {"name": "40-44", "value": 65},
+        {"name": "45-49", "value": 76},
+        {"name": "50-54", "value": 82},
+        {"name": "55-59", "value": 65},
+        {"name": "60-64", "value": 57},
+        {"name": "65-69", "value": 48},
+        {"name": "70-74", "value": 67},
+        {"name": "75-79", "value": 57},
+        {"name": "80-84", "value": 55},
+        {"name": ">85", "value": 52}
+    ],
+    "race_groups": [
+        {"name": "white", "value": 852},
+        {"name": "black", "value": 48},
+        {"name": "native american", "value": 3},
+        {"name": "asian", "value": 361},
+        {"name": "pacific islander", "value": 0},
+        {"name": "other", "value": 15},
+        {"name": "mixed", "value": 33}
+    ],
+    "gender_groups": [
+        {"name": "male", "value": 726},
+        {"name": "female", "value": 586}
+    ],
+    "housing_groups": [
+        {"name": "owners", "pop_value": 397, "unit_value": 225},
+        {"name": "renters", "pop_value": 885, "unit_value": 571}
+    ]
+}

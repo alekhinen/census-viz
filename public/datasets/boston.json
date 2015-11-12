@@ -1,42 +1,40 @@
 {
-    "boston": {
-        "total_population": 617594,
-        "age_groups": [
-            {"name": "<5", "value": 16442},
-            {"name": "5-9", "value": 13640},
-            {"name": "10-14", "value": 13542},
-            {"name": "15-19", "value": 23838},
-            {"name": "20-24", "value": 42288},
-            {"name": "25-29", "value": 36214},
-            {"name": "30-34", "value": 26351},
-            {"name": "35-39", "value": 19936},
-            {"name": "40-44", "value": 18163},
-            {"name": "45-49", "value": 17865},
-            {"name": "50-54", "value": 16444},
-            {"name": "55-59", "value": 14258},
-            {"name": "60-64", "value": 11820},
-            {"name": "65-69", "value": 8476},
-            {"name": "70-74", "value": 6125},
-            {"name": "75-79", "value": 4512},
-            {"name": "80-84", "value": 3309},
-            {"name": ">85", "value": 2728}
-        ],
-        "race_groups": [
-            {"name": "white", "value": 333033},
-            {"name": "black", "value": 150437},
-            {"name": "native american", "value": 2399},
-            {"name": "asian", "value": 55235},
-            {"name": "pacific islander", "value": 265},
-            {"name": "other", "value": 51893},
-            {"name": "mixed", "value": 24332}
-        ],
-        "gender_groups": [
-            {"name": "male", "value": 295951},
-            {"name": "female", "value": 321643}
-        ],
-        "housing_groups": [
-            {"name": "owners", "pop_value": 204363, "unit_value": 85791},
-            {"name": "renters", "pop_value": 367017, "unit_value": 166908}
-        ]
-    }
+    "total_population": 617594,
+    "age_groups": [
+        {"name": "<5", "value": 16442},
+        {"name": "5-9", "value": 13640},
+        {"name": "10-14", "value": 13542},
+        {"name": "15-19", "value": 23838},
+        {"name": "20-24", "value": 42288},
+        {"name": "25-29", "value": 36214},
+        {"name": "30-34", "value": 26351},
+        {"name": "35-39", "value": 19936},
+        {"name": "40-44", "value": 18163},
+        {"name": "45-49", "value": 17865},
+        {"name": "50-54", "value": 16444},
+        {"name": "55-59", "value": 14258},
+        {"name": "60-64", "value": 11820},
+        {"name": "65-69", "value": 8476},
+        {"name": "70-74", "value": 6125},
+        {"name": "75-79", "value": 4512},
+        {"name": "80-84", "value": 3309},
+        {"name": ">85", "value": 2728}
+    ],
+    "race_groups": [
+        {"name": "white", "value": 333033},
+        {"name": "black", "value": 150437},
+        {"name": "native american", "value": 2399},
+        {"name": "asian", "value": 55235},
+        {"name": "pacific islander", "value": 265},
+        {"name": "other", "value": 51893},
+        {"name": "mixed", "value": 24332}
+    ],
+    "gender_groups": [
+        {"name": "male", "value": 295951},
+        {"name": "female", "value": 321643}
+    ],
+    "housing_groups": [
+        {"name": "owners", "pop_value": 204363, "unit_value": 85791},
+        {"name": "renters", "pop_value": 367017, "unit_value": 166908}
+    ]
 }

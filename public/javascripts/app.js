@@ -1,8 +1,34 @@
-window.onload = function() {
+var selectedDataSet = '/datasets/boston.json';
+var currentlySelectedId = '#dd-boston';
+
+function switchData(title, selectedId, datasetTitle) {
+  if (selectedId != currentlySelectedId) {
+    $('#vis-dropdown-title').html(title);
+    $(selectedId).addClass('disabled');
+    $(currentlySelectedId).removeClass('disabled');
+    
+    currentlySelectedId = selectedId;
+    selectedDataSet = '/datasets/' + datasetTitle + '.json';
+    
+    clearVisualization();
+    initVisualization();
+  }
+}
+
+window.onload = initVisualization;
+
+function initVisualization() {
   loadBarChart();
   loadGenderDonutChart();
   loadHousingDonutChart();
   loadRaceDonutChart();
+}
+
+function clearVisualization() {
+  $('#age-chart').html('');
+  $('#race-chart').html('');
+  $('#gender-chart').html('');
+  $('#housing-chart').html('');
 }
 
 function loadBarChart() {
@@ -32,12 +58,12 @@ function loadBarChart() {
     .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-  d3.json("/datasets/boston.json", function(error, data) {
+  d3.json(selectedDataSet, function(error, data) {
     if (error) {
       throw error;
     }
 
-    var age_groups = data.boston.age_groups;
+    var age_groups = data.age_groups;
     var max_value = d3.max(age_groups, function(d) { return d.value; });
     x.domain(age_groups.map(function(d) { return d.name; }));
     y.domain([0, max_value]);
@@ -90,12 +116,12 @@ function loadGenderDonutChart() {
     .append("g")
       .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
-  d3.json("/datasets/boston.json", function(error, data) {
+  d3.json(selectedDataSet, function(error, data) {
     if (error) {
       throw error;
     }
 
-    var data = data.boston.gender_groups;
+    var data = data.gender_groups;
 
     var g = svg.selectAll(".arc")
         .data(pie(data))
@@ -137,12 +163,12 @@ function loadHousingDonutChart() {
     .append("g")
       .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
-  d3.json("/datasets/boston.json", function(error, data) {
+  d3.json(selectedDataSet, function(error, data) {
     if (error) {
       throw error;
     }
 
-    var data = data.boston.housing_groups;
+    var data = data.housing_groups;
 
     var g = svg.selectAll(".arc")
         .data(pie(data))
@@ -184,12 +210,12 @@ function loadRaceDonutChart() {
     .append("g")
       .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
-  d3.json("/datasets/boston.json", function(error, data) {
+  d3.json(selectedDataSet, function(error, data) {
     if (error) {
       throw error;
     }
 
-    var data = data.boston.race_groups;
+    var data = data.race_groups;
 
     var g = svg.selectAll(".arc")
         .data(pie(data))

@@ -12,6 +12,10 @@
     <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
 
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/bar_chart.css' />
+    <link rel='stylesheet' href='/stylesheets/donut_chart.css' />
+    
+    <script src="/javascripts/app.js"></script>
   </head>
   <body>
   	<header>
@@ -24,14 +28,15 @@
 		  		<p>Which neighborhood are you interested in?</p>
 		  		<div class="dropdown">
 		  			<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-				    Boston
+				    <span id="vis-dropdown-title">Boston</span>
 				    <span class="caret"></span>
 				  	</button>
 					<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-						<li><a href="#">Allston</a></li>
-					    <li><a href="#">Back Bay</a></li>
-					    <li class="disabled"><a href="#">Boston</a></li>
-					    <li><a href="#">Roxbury</a></li>
+						<li id="dd-allston" onclick="switchData('Allston', '#dd-allston', 'allston')"><a href="#">Allston</a></li>
+					  <li id="dd-backbay" onclick="switchData('Back Bay', '#dd-backbay', 'back_bay')"><a href="#">Back Bay</a></li>
+            <li id="dd-bayvillage" onclick="switchData('Bay Village', '#dd-bayvillage', 'bay_village')"><a href="#">Bay Village</a></li>
+            <li id="dd-beaconhill" onclick="switchData('Beacon Hill', '#dd-beaconhill', 'beacon_hill')"><a href="#">Beacon Hill</a></li>
+					  <li id="dd-boston" onclick="switchData('Boston', '#dd-boston', 'boston')" class="disabled"><a href="#">Boston</a></li>
 					</ul>
 				</div>
 				<div style="clear:both;"></div>
