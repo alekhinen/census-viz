@@ -1,5 +1,6 @@
 var selectedDataSet = '/datasets/boston.json';
 var currentlySelectedId = '#dd-boston';
+var currentTitle = 'Boston';
 
 function switchData(title, selectedId, datasetTitle) {
   if (selectedId != currentlySelectedId) {
@@ -7,6 +8,7 @@ function switchData(title, selectedId, datasetTitle) {
     $(selectedId).addClass('disabled');
     $(currentlySelectedId).removeClass('disabled');
     
+    currentTitle = title;
     currentlySelectedId = selectedId;
     selectedDataSet = '/datasets/' + datasetTitle + '.json';
     
@@ -121,6 +123,12 @@ function loadGenderDonutChart() {
       throw error;
     }
 
+    var dscr = 'There are ' + data.total_population + ' people living in ' + currentTitle + '.';
+    dscr += 'The gender split is: ' + data.gender_groups[0].value + ' men ';
+    dscr += ' and ' + data.gender_groups[1].value + ' women.';
+
+    $('#gender-dscr').html(dscr);
+
     var data = data.gender_groups;
 
     var g = svg.selectAll(".arc")
@@ -169,6 +177,12 @@ function loadHousingDonutChart() {
     }
 
     var data = data.housing_groups;
+
+    var dscr = 'There are ' + (data[0].unit_value + data[1].unit_value) + ' housing units.';
+    dscr += 'The housing split is: ' + data[0].unit_value + ' owner-occupied homes';
+    dscr += ' and ' + data[1].unit_value + ' renter-occupied homes';
+
+    $('#housing-dscr').html(dscr);
 
     var g = svg.selectAll(".arc")
         .data(pie(data))
